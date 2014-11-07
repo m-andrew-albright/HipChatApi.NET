@@ -93,7 +93,7 @@ namespace HipChatApi
 
         public HipChatClient(IRestClient restClient, string authToken)
         {
-            restClient.BaseUrl = "https://api.hipchat.com";
+            restClient.BaseUrl = new Uri("https://api.hipchat.com");
             RestClient = restClient;
             AuthToken = authToken;
         }
